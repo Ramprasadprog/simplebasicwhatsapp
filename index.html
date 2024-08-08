@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Container for WhatsApp and its content */
+        .whatsapp-border {
+            background-color: #25D366; /* WhatsApp green */
+            border: 20px solid #25D366; 
+            width: 26.3%; /* Adjust width as needed */
+            height: 25%; /* Adjust height as needed */
+            display: flex; /* Use flexbox to align children */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            position: relative; /* Ensure proper positioning */
+        }
+
+        /* Style for the round image */
+        .round-image {
+            width: 40px; /* Set the size of the image */
+            height: 50px; /* Ensure height equals width for a circle */
+            border-radius: 50%; /* Makes the image round */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            margin-right: 10px; /* Space between image and text */
+            position: absolute;
+            top: -10px;
+            left: 0px;
+            align-content: center;
+        }
+
+        /* Style for the heading */
+        h3 {
+            color: white; /* Ensure the text is readable on the green background */
+            margin: 0; /* Remove default margin */
+        }
+
+        .chat-container {
+            border: 20px solid #ddd; /* Border for the chat container */
+            background-color: #f5f5f5; /* Background color for the chat area */
+            width: 25%; /* Adjust width as needed */
+            height: 600px; /* Adjust height as needed */
+            display: flex; /* Use flexbox to align children */
+            flex-direction: column; /* Stack messages vertically */
+            padding: 10px; /* Add padding inside the container */
+            overflow-y: auto; /* Enable vertical scrolling if needed */
+        }
+
+        /* Styling for received messages */
+        .message-received {
+            background-color: #E1FFC7; /* Light green for received messages */
+            align-self: flex-start; /* Align received messages to the left */
+        }
+
+        /* Styling for sent messages */
+        .message-sent {
+            background-color: #DCF8C6; /* Light gray for sent messages */
+            align-self: flex-end; /* Align sent messages to the right */
+        }
+
+        /* Common styling for message bubbles */
+        .message-received, .message-sent {
+            padding: 10px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            max-width: 80%; /* Prevent messages from being too wide */
+            display: inline-block;
+            line-height: 1.4;
+            color: #333; /* Text color */
+        }
+
+        /* Styling for date labels */
+        .date {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            border-radius: 5%;
+            border: 1.5px solid #DCF8C6;
+            background-color: #ddd;
+            padding: 5px 10px;
+            margin: 10px 0; /* Add margin to create space between dates and messages */
+            font-weight: bold; /* Make the date text bold */
+            position: sticky;
+            justify-self: center;
+            left: 205px;
+            z-index: -1000px;
+        
+        }
+        .date1{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            border-radius: 5%;
+            border: 1.5px solid #DCF8C6;
+            background-color: #ddd;
+            padding: 5px 10px;
+            margin: 10px 0; /* Add margin to create space between dates and messages */
+            font-weight: bold; /* Make the date text bold */
+            position: sticky;
+            justify-self: center;
+            left: 205px;
+            z-index: -1000px;
+        
+        }
+        .date2{
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            border-radius: 5%;
+            border: 1.5px solid #DCF8C6;
+            background-color: #ddd;
+            padding: 5px 10px;
+            margin: 10px 0; /* Add margin to create space between dates and messages */
+            font-weight: bold; /* Make the date text bold */
+            position: sticky;
+            justify-self: center;
+            left: 205px;
+            z-index: -1000px;
+        
+        }
+       
+        
+        .smiley{
+            position: absolute;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            left: 10px;
+            justify-self:self-start;
+            z-index: 1000px;
+            background-color: transparent;
+        }
+        .type-chat {
+    border: 0.5px solid wheat;
+    width: 27%;
+    height: 30px;
+    padding-left: 40px; /* Adjust the left padding to move the placeholder text to the right */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    position: relative; /* Ensure relative positioning to accommodate the smiley image */
+    margin-left:25px; /* Add margin to separate from the smiley image */
+}
+/* Optional: Align the text inside the input field */
+input::placeholder {
+    color: #666; /* Change placeholder color if needed */
+    text-align: left; /* Ensure placeholder text is aligned as desired */
+}
+    </style>
+</head>
+<body>
+    <div class="whatsapp-border">
+        <img src="download.jpeg" alt="Profile Image" class="round-image">
+        <h3>Ammu</h3>
+    </div>
+    <div class="chat-container">
+        <div class="date">Aug 2</div>
+        <div class="message-received">
+            <p>Hey! How are you?</p>
+        </div>
+        <div class="message-sent">
+            <p>I'm good, thanks! How about you?</p>
+        </div>
+        <div class="message-received">
+            <p>I'm doing great! Let's catch up soon.</p>
+        </div>
+        <div class="date1">Aug 3</div>
+        <div class="message-sent">
+            <p>Sounds good! How about this weekend?</p>
+        </div>
+        <div class="message-received">
+            <p>This weekend works for me. Let's plan for Saturday afternoon?</p>
+        </div>
+        <div class="message-sent">
+            <p>Saturday afternoon it is. Looking forward to it!</p>
+        </div>
+        <div class="date2">Aug 4</div>
+        <div class="message-received">
+            <p>Same here! See you then!</p>
+        </div>
+        <div class="message-sent">
+            <p>Great! Do you have any specific place in mind?</p>
+        </div>
+        <div class="message-received">
+            <p>How about the new café downtown? I've heard good things about it.</p>
+        </div>
+        <div class="message-sent">
+            <p>Perfect! Let's meet there at 2 PM?</p>
+        </div>
+        <div class="message-received">
+            <p>2 PM works for me. See you then!</p>
+        </div>
+        <div class="message-sent">
+            <p>See you! Have a great rest of the week!</p>
+        </div>
+        <div class="message-received">
+            <p>Thanks, you too!</p>
+        </div>
+    </div>
+    <div class="message-type">
+        <img src="smiley.jpeg" class="smiley">
+        <input type="text" placeholder="Type Message" class="type-chat">
+
+    </div>
+</body>
+</html>
